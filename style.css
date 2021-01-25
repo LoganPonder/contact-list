@@ -1,0 +1,210 @@
+:root{
+  --primary: #2171bb;
+  --primary-lighten: #4e9de7;
+  --primary-darken: #113a5f;
+  --bg: #0f1a20;
+  --shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  --corners: 3px;
+  --text-color: #fff;
+  --dark: #3a3838;
+  --dark-lighten: #504c4c;
+  --light: #1e3341;
+  --danger: #bb1818;
+  --primary-font: 'Lato', sans-serif;
+  --secondary-font: 'Open Sans', sans-serif;
+}
+
+body{
+  background-color: var(--bg);
+  font-size: 16pt;
+  color: var(--text-color);
+  font-family: var(--primary-font);
+}
+
+p{
+  margin: .5em 0;
+}
+
+img{
+  max-width: 100%;
+}
+
+form{
+  margin: 0;
+}
+
+label{
+  display: block;
+  font-size: 12pt;
+}
+
+input{
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  margin-bottom: .75em;
+}
+
+button{
+  background-color: var(--primary);
+  color: var(--text-color);
+  border: 1px solid var(--primary-darken);
+  border-radius: var(--corners);
+  box-shadow: var(--shadow);
+  text-transform: uppercase;
+  transition: all .2s ease;
+  cursor: pointer;
+  padding: 1em;
+  outline: none;
+}
+
+button:hover{
+  background-color: var(--primary-lighten);
+}
+
+.contacts{
+  overflow-y: scroll;
+  max-height: 50vh; 
+}
+
+.container{
+  margin: 1em .5em;
+}
+
+.card{
+  background-color: var(--light);
+  padding: 1em;
+  box-shadow: var(--shadow);
+  border-radius: var(--corners);
+}
+
+.shadow{
+  filter: drop-shadow(var(--shadow));
+}
+
+.bg-dark{
+  background-color: var(--dark);
+}
+.text-light{
+  color: var(--light)
+}
+
+.btn-dark{
+  background-color: var(--dark-lighten);
+  border-color: var(--dark);
+}
+.btn-dark:hover{
+  background-color: var(--dark);
+  border-color: var(--dark-lighten);
+}
+
+.btn-cancel{
+  background-color: var(--danger);
+  border-color: rgb(90, 5, 5);
+  color: var(--text-color);
+}
+.btn-cancel:hover{
+  background-color: #d63737;
+  border-color: #ff3737;
+  color: var(--text-color);
+}
+
+.text-danger{
+  color: #d63737;
+  filter: brightness(300%);
+}
+
+.d-flex{
+  display: flex;
+  align-items: center;
+}
+.d-flex.space-between{
+  justify-content: space-between;
+}
+.d-flex.space-around{
+  justify-content: space-around;
+}
+
+.mt-1{
+  margin-top: .5em;
+}
+.mt-2{
+  margin-top: 1em;
+}
+.mt-3{
+  margin-top: 1.5em;
+}
+
+.mb-1{
+  margin-bottom: .5em;
+}
+.mb-2{
+  margin-bottom: 1em;
+}
+.mb-3{
+  margin-bottom: 1.5em;
+}
+
+.action{
+  cursor: pointer;
+  transition: all .3s linear;
+  filter: brightness(.8);
+}
+.action:hover{
+  filter: brightness(1);
+}
+
+.fab{
+  border-radius: 50%;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  padding: 1.5em;
+  border: none;
+  box-shadow: var(--shadow);
+  z-index: 999;
+  outline: none;
+}
+.fab:hover{
+  box-shadow: 2px 0 10px #155c96b3;
+  background-color: var(--primary-lighten);
+}
+
+.emergency-contact{
+  background: var(--text-color);
+  color: var(--light);
+  position: relative;
+}
+.emergency-contact h3:before{
+  content: "🚑 Emergency Contact";
+  color: var(--light);
+  position: absolute;
+  right: 1em;
+  font-size: 14pt;
+}
+
+.emergency-field {
+  display: flex;
+  justify-content: space-between;
+}
+
+input.emergency-checkbox {
+  display: inline-block;
+  width: 50%;
+}
+
+.hidden{
+  display: none !important;
+}
+
+.contacts::-webkit-scrollbar {
+  width: 0;
+}
